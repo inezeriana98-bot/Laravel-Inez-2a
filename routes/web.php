@@ -43,5 +43,5 @@ Route::post('/kalkulator/segitiga/proses', [Kalkulator_SegitigaController::class
 // 7. route ke controller Dashboard
 Route::get('/dashboard',[DashboardController::class, 'home']);
 
-// 8. laman gallery
+// 8. menambahkan laman gallery
 Route::get('/gallery',[DashboardController::class, 'gallery']);
