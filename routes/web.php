@@ -39,3 +39,9 @@ Route::get('/daftar/mahasiswa', [MahasiswaController::class, 'index']);
 // 6. Route Kalkulator Segitiga
 Route::get('/kalkulator/segitiga', [Kalkulator_SegitigaController::class, 'segitiga']);
 Route::post('/kalkulator/segitiga/proses', [Kalkulator_SegitigaController::class, 'prosesSegitiga']);
+
+// 7. route ke controller Dashboard
+Route::get('/dashboard',[DashboardController::class, 'home']);
+
+// 8. laman gallery
+Route::get('/gallery',[DashboardController::class, 'gallery']);
