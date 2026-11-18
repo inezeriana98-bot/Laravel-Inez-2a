@@ -1,4 +1,18 @@
+<!-- Awal komponen Sidebar -->
 <div class="sidebar">
+    <!-- Daftar menu navigasi -->
+    <ul class="nav">
+        <!-- Tautan ke halaman Dashboard/Home -->
+        <li><a href="/dashboard">Home</a></li>
+        
+        <!-- Tautan ke halaman Gallery -->
+        <li><a href="/gallery">Gallery</a></li>
+        
+        <!-- Tautan ke halaman About -->
+        <li><a href="/about">About</a></li>
+    </ul>
+</div>
+<!-- Akhir komponen Sidebar --><div class="sidebar">
 <ul class="nav">
 <li><a href="/dashboard">Home</a></li>
 <li><a href="/gallery">Gallery</a></li>
