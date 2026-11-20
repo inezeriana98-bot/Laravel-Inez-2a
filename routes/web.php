@@ -10,11 +10,12 @@ use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\Kalkulator_SegitigaController; // <-- Ini yang tadi kurang diimport
 use App\Http\Controllers\EmployeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AuthController;
 
-// 1. Route Dasar
-Route::get('/', function () {
-    return "Hallo namaku adalah Laravel, Salam Kenal";
-});
+// // 1. Route Dasar
+// Route::get('/', function () {
+//     return "Hallo namaku adalah Laravel, Salam Kenal";
+// });
 
 // Route About
 Route::get('/about', function () {
