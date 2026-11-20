@@ -91,3 +91,9 @@ Route::delete('/admin/{admin}', [AdminController::class, 'destroy']);
 Route::get('/', function(){
     return view('login');
 });
+
+//route untuk proses login
+Route::post('/login', [AuthController::class, 'cek']);
+
+//route untuk logout
+Route::get('/logout',[AuthController::class, 'logout']);
