@@ -1,26 +1,31 @@
+/* Pengaturan dasar halaman dan latar belakang luar */
 body {
     font: 16px arial, sans-serif;
     background-color: lightgray;
 }
 
+/* Pembungkus utama halaman agar berada di tengah */
 .container {
     width: 800px;
     margin: auto;
     background-color: white;
 }
 
+/* Bagian kepala halaman */
 .header {
     padding-top: 20px;
     padding-right: 20px;
     padding-left: 20px;
 }
 
+/* Judul utama di dalam header */
 .header .judul {
     font-size: 40px;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
+/* Gambar banner dengan garis batas atas dan bawah */
 .banner {
     height: 200px;
     background-image: url(https://picsum.photos/200);
@@ -29,11 +34,13 @@ body {
     border-bottom: 5px solid skyblue;
 }
 
+/* Wadah utama isi halaman menggunakan tata letak flexbox */
 .isi {
     display: flex;
     margin: 5px;
 }
 
+/* Panel navigasi di sisi kiri */
 .sidebar {
     width: 10rem;
     height: 60vh;
@@ -42,6 +49,7 @@ body {
     padding: 10px;
 }
 
+/* Area konten utama di sebelah sidebar */
 .content {
     margin-left: 5px;
     width: 100vh;
@@ -52,16 +60,19 @@ body {
     border: 0.5px solid skyblue;
 }
 
+/* Menghilangkan bullet pada item navigasi */
 .nav li {
     list-style: none;
     margin-bottom: 10px;
 }
 
+/* Tampilan tautan navigasi */
 .nav li a {
     text-decoration: none;
     color: white;
 }
 
+/* Efek saat kursor diarahkan ke tautan navigasi */
 .nav li a:hover {
     background-color: lightblue;
     color: navy;
