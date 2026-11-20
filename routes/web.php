@@ -85,3 +85,8 @@ Route::put('/admin/{admin}', [AdminController::class, 'update']);
 
 // Proses hapus data admin berdasarkan id_admin
 Route::delete('/admin/{admin}', [AdminController::class, 'destroy']);
+
+//agar langsung masuk login
+Route::get('/', function(){
+    return view('login');
+});
