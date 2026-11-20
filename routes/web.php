@@ -95,5 +95,32 @@ Route::get('/', function(){
 //route untuk proses login
 Route::post('/login', [AuthController::class, 'cek']);
 
-//route untuk logout
-Route::get('/logout',[AuthController::class, 'logout']);
+//route group yang harus login dahulu
+Route::group(['middleware' => 'islogin'], function () {
+    // route ke controller Dashboard
+    Route::get('/dashboard', [DashboardController::class, 'home']);
+
+    // menambahkan laman gallery
+    Route::get('/gallery', [DashboardController::class, 'gallery']);
+
+    // Mendefinisikan route untuk mengakses halaman data pegawai (index)
+    Route::get('/employe', [EmployeController::class, 'index']);
+
+    // route untuk menampilkan form tambah data pegawai
+    Route::get('/employe/create', [EmployeController::class, 'create']);
+
+    // route untuk proses simpan data pegawai
+    Route::post('/employe/store', [EmployeController::class, 'store']);
+
+    // route untuk menampilkan form edit data pegawai berdasarkan id
+    Route::get('/employe/edit/{employe}', [EmployeController::class, 'show']);
+
+    // route untuk proses ubah data pegawai berdasarkan id
+    Route::put('/employe/{employe}', [EmployeController::class, 'update']);
+
+    // route untuk proses hapus data pegawai berdasarkan id
+    Route::delete('/employe/{employe}', [EmployeController::class, 'destroy']);
+
+    //route untuk logout
+    Route::get('/logout', [AuthController::class, 'logout']);
+});
